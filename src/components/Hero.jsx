@@ -27,27 +27,37 @@ function Hero() {
           className="max-w-5xl mx-auto mb-16"
         >
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 leading-tight text-gray-900">
-            <span className="font-extralight">L'Architecte IA qui transforme</span>
+            <span className="font-extralight">L'architecte IA qui transforme</span>
             <br />
             <span className="bg-gradient-to-r from-blue-900 via-gray-800 to-amber-600 bg-clip-text text-transparent font-medium">
-              Votre Business Strategy
+              votre business strategy
             </span>
             <br />
-            <span className="font-extralight">en Domination de Marché</span>
+            <span className="font-extralight">en croissance mesurable</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            J'aide les dirigeants ambitieux à multiplier leur CA par 3-5x grâce à l'IA stratégique.
+            J'aide les dirigeants ambitieux à transformer leur business grâce à l'IA stratégique.
             <br />
-            Résultats garantis en 6 mois ou 100% remboursé. ROI moyen : +380%.
+            <span className="text-blue-900 font-medium">Ma spécialité :</span> Systèmes multi-agents autonomes, IA conversationnelle avancée et automatisation intelligente à l'échelle.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-gradient-to-r from-blue-900 to-gray-800 text-white px-8 py-4 rounded-lg text-lg font-medium hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              Audit IA Gratuit → +2M€ CA
+            <button 
+              onClick={() => {
+                const element = document.getElementById('contact');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="bg-gradient-to-r from-blue-900 to-gray-800 text-white px-8 py-4 rounded-lg text-lg font-medium hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              Discuter de votre projet IA
             </button>
-            <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-medium hover:border-gray-400 hover:bg-gray-50 transition-all duration-300">
-              Voir les Success Stories
+            <button 
+              onClick={() => {
+                const element = document.getElementById('projets');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-medium hover:border-gray-400 hover:bg-gray-50 transition-all duration-300">
+              Voir mes projets en cours
             </button>
           </div>
         </Motion.div>
@@ -68,16 +78,16 @@ function Hero() {
           <div className="bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-2xl border border-gray-200 p-12">
             <div className="grid grid-cols-3 gap-8 items-center">
               <div className="text-center">
-                <div className="text-4xl font-light text-blue-900 mb-2">+380%</div>
-                <div className="text-gray-600 font-light">ROI Moyen Client</div>
+                <div className="text-4xl font-light text-blue-900 mb-2">2025</div>
+                <div className="text-gray-600 font-light">Expertise IA</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-light text-gray-800 mb-2">€2.5M</div>
-                <div className="text-gray-600 font-light">CA Généré Clients</div>
+                <div className="text-4xl font-light text-gray-800 mb-2">2</div>
+                <div className="text-gray-600 font-light">Projets en cours</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-light text-amber-600 mb-2">97%</div>
-                <div className="text-gray-600 font-light">Taux de Succès</div>
+                <div className="text-4xl font-light text-amber-600 mb-2">100%</div>
+                <div className="text-gray-600 font-light">Sur mesure</div>
               </div>
             </div>
           </div>

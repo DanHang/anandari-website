@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { Mail, Calendar, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import GuideModal from './GuideModal';
 
 function FinalCTA() {
+  const [isGuideModalOpen, setIsGuideModalOpen] = useState(false);
   return (
     <section id="contact" className="py-24 px-6 bg-white">
       <div className="container mx-auto">
@@ -15,9 +18,9 @@ function FinalCTA() {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
-              <span className="font-extralight">Transformons Ensemble</span>
+              <span className="font-extralight">Transformons ensemble</span>
               <br />
-              <span className="bg-gradient-to-r from-blue-900 to-amber-600 bg-clip-text text-transparent font-medium">Votre Vision</span>
+              <span className="bg-gradient-to-r from-blue-900 to-amber-600 bg-clip-text text-transparent font-medium">votre vision</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light">
               Échangeons sur vos défis stratégiques et explorons comment l'IA peut accélérer votre croissance
@@ -35,12 +38,14 @@ function FinalCTA() {
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-medium text-gray-900 mb-4">
-                Échange Stratégique
+                Échange stratégique
               </h3>
               <p className="text-gray-600 font-light mb-6">
                 Discutons de vos objectifs et explorons les opportunités d'IA pour votre organisation.
               </p>
-              <button className="bg-blue-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition-all duration-300 inline-flex items-center gap-2">
+              <button 
+                onClick={() => window.location.href = 'mailto:contact@anandari.com?subject=Consultation%20IA%20Stratégique'}
+                className="bg-blue-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition-all duration-300 inline-flex items-center gap-2">
                 <span>Envoyer un message</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -55,12 +60,14 @@ function FinalCTA() {
                 <Calendar className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-medium text-gray-900 mb-4">
-                Consultation Personnalisée
+                Consultation personnalisée
               </h3>
               <p className="text-gray-600 font-light mb-6">
                 Réservez un créneau pour une analyse approfondie de vos besoins stratégiques.
               </p>
-              <button className="bg-amber-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-700 transition-all duration-300 inline-flex items-center gap-2">
+              <button 
+                onClick={() => window.open('https://calendly.com/dan-hang-anandari/faisons-connaissance', '_blank')}
+                className="bg-amber-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-700 transition-all duration-300 inline-flex items-center gap-2">
                 <span>Réserver un créneau</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -83,15 +90,28 @@ function FinalCTA() {
               Votre avantage concurrentiel commence aujourd'hui.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-gray-900 px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-all duration-300">
+              <button 
+                onClick={() => {
+                  const element = document.getElementById('approche');
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="bg-white text-gray-900 px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-all duration-300">
                 Découvrir mon approche
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button 
+                onClick={() => setIsGuideModalOpen(true)}
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Télécharger le guide IA
               </button>
             </div>
           </motion.div>
         </motion.div>
+        
+        {/* Guide Modal */}
+        <GuideModal 
+          isOpen={isGuideModalOpen} 
+          onClose={() => setIsGuideModalOpen(false)} 
+        />
       </div>
     </section>
   );

@@ -25,14 +25,16 @@ function Footer() {
             </p>
             <div className="flex items-center gap-4">
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/dan-hang/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn" 
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="#" 
+                href="mailto:contact@anandari.com" 
                 aria-label="Email" 
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-amber-600 transition-all duration-300"
               >
@@ -67,9 +69,9 @@ function Footer() {
                 <a 
                   href="#cas-clients" 
                   className="text-gray-400 hover:text-white transition-colors duration-300 font-light"
-                  onClick={(e) => handleLinkClick(e, 'cas-clients')}
+                  onClick={(e) => handleLinkClick(e, 'projets')}
                 >
-                  Cas Clients
+                  Cas clients
                 </a>
               </li>
               <li>
@@ -91,7 +93,7 @@ function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-400 font-light">Paris, France</p>
+                  <p className="text-gray-400 font-light">05 Rue Villiot, 75012 Paris</p>
                   <p className="text-gray-500 text-sm font-light">Interventions internationales</p>
                 </div>
               </div>
@@ -109,7 +111,7 @@ function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm font-light">
-            © 2024 Anandari. Tous droits réservés.
+            © 2025 Anandari SASU. Tous droits réservés. SIRET : 949696959 00012
           </p>
           
           <div className="flex items-center gap-6 mt-4 md:mt-0">

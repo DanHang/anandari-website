@@ -28,7 +28,7 @@ function Navigation() {
         </div>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-12">
+        <div className="hidden md:flex items-center space-x-12">
           <a 
             href="#expertise" 
             className="text-gray-600 hover:text-gray-900 transition-colors duration-300 font-light text-lg"
@@ -46,13 +46,13 @@ function Navigation() {
           <a 
             href="#cas-clients" 
             className="text-gray-600 hover:text-gray-900 transition-colors duration-300 font-light text-lg"
-            onClick={(e) => handleLinkClick(e, 'cas-clients')}
+            onClick={(e) => handleLinkClick(e, 'projets')}
           >
-            Cas Clients
+            Cas clients
           </a>
           <a 
             href="#contact" 
-            className="bg-gradient-to-r from-blue-900 to-gray-800 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300"
+            className="bg-gradient-to-r from-blue-900 to-gray-800 text-white px-6 py-2.5 rounded-lg font-medium hover:shadow-lg transition-all duration-300"
             onClick={(e) => handleLinkClick(e, 'contact')}
           >
             Contact
@@ -114,7 +114,7 @@ function Navigation() {
                 className="text-gray-600 hover:text-gray-900 hover:bg-gray-50 py-3 px-4 rounded-lg transition-all duration-200 text-lg font-light"
                 onClick={(e) => handleLinkClick(e, 'cas-clients')}
               >
-                Cas Clients
+                Cas clients
               </a>
               <a 
                 href="#contact" 

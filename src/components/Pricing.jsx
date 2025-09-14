@@ -1,13 +1,10 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-
 function Pricing() {
-  const [isYearly, setIsYearly] = useState(false);
 
   const plans = [
     {
-      name: "AUDIT IA STRATÉGIQUE",
+      name: "Audit IA stratégique",
       description: "Diagnostic ultra-précis de votre potentiel IA",
       price: "€15,000",
       period: "Engagement unique",
@@ -18,13 +15,13 @@ function Pricing() {
         "ROI prévisionnelle détaillée",
         "Garantie satisfaction 100%"
       ],
-      cta: "Réserver mon Audit",
+      cta: "Réserver mon audit",
       highlighted: false,
       buttonColor: "bg-gradient-to-r from-blue-900 to-gray-800 hover:from-blue-800 hover:to-gray-700 text-white shadow-xl"
     },
     {
-      name: "TRANSFORMATION IA", 
-      description: "Accompagnement complet vers la domination",
+      name: "Transformation IA", 
+      description: "Accompagnement complet vers l'excellence",
       price: "€75,000",
       period: "6 mois / Projet",
       features: [
@@ -32,14 +29,14 @@ function Pricing() {
         "Implémentation IA haute performance",
         "Formation équipe dirigeante", 
         "Suivi ROI hebdomadaire",
-        "Garantie +300% ROI ou remboursé"
+        "Méthodologie éprouvée et ROI documenté"
       ],
-      cta: "Lancer ma Transformation",
+      cta: "Lancer ma transformation",
       highlighted: true,
       buttonColor: "bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white shadow-xl"
     },
     {
-      name: "PARTNERSHIP STRATÉGIQUE",
+      name: "Partnership stratégique",
       description: "Votre CTO IA externalisé",
       price: "€25,000",
       period: "par mois",
@@ -50,7 +47,7 @@ function Pricing() {
         "Coaching leadership IA",
         "Réseau d'experts premium"
       ],
-      cta: "Devenir Partenaire",
+      cta: "Devenir partenaire",
       highlighted: false,
       buttonColor: "bg-gradient-to-r from-gray-800 to-gray-700 hover:from-gray-700 hover:to-gray-600 text-white shadow-xl"
     }
@@ -66,36 +63,16 @@ function Pricing() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h3 className="text-sm font-semibold text-blue-900 tracking-wider uppercase mb-4">
+          <h3 className="text-sm font-medium text-blue-400 tracking-wider uppercase mb-4">
             INVESTISSEMENT
           </h3>
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
-            <span className="font-extralight">Tarifs</span>
-            <span className="bg-gradient-to-r from-blue-900 to-amber-600 bg-clip-text text-transparent font-medium"> Premium</span>
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
+            <span className="font-extralight">Tarifs</span>{' '}
+            <span className="bg-gradient-to-r from-blue-400 to-amber-500 bg-clip-text text-transparent font-medium">premium</span>
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Investissement haute rentabilité pour dirigeants ambitieux
           </p>
-          
-          {/* Billing Toggle */}
-          <div className="flex items-center justify-center space-x-4 mb-12">
-            <span className={`text-lg ${!isYearly ? 'text-[var(--text-primary)]' : 'text-[var(--text-secondary)]'}`}>
-              Monthly
-            </span>
-            <button
-              onClick={() => setIsYearly(!isYearly)}
-              className="relative w-14 h-7 bg-[var(--bg-gray-700)] rounded-full transition-colors duration-200 focus:outline-none"
-            >
-              <div
-                className={`absolute top-1 left-1 w-5 h-5 bg-[var(--text-primary)] rounded-full transition-transform duration-200 ${
-                  isYearly ? 'transform translate-x-7' : ''
-                }`}
-              />
-            </button>
-            <span className={`text-lg ${isYearly ? 'text-[var(--text-primary)]' : 'text-[var(--text-secondary)]'}`}>
-              Yearly
-            </span>
-          </div>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -109,7 +86,7 @@ function Pricing() {
               whileHover={{ y: -5 }}
               className={`relative rounded-2xl p-8 transition-all duration-300 flex flex-col h-full ${
                 plan.highlighted 
-                  ? 'bg-gradient-to-b from-amber-50 to-amber-25 border-2 border-amber-500' 
+                  ? 'bg-gradient-to-b from-gray-800 to-gray-900 border-2 border-amber-500 shadow-2xl shadow-amber-500/20' 
                   : 'bg-gray-800/80 border border-gray-700'
               }`}
             >
@@ -134,6 +111,10 @@ function Pricing() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => {
+                    const element = document.getElementById('contact');
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className={`w-full py-4 px-8 rounded-full font-semibold transition-all duration-300 text-lg mb-8 ${plan.buttonColor} text-black`}
                 >
                   {plan.cta}

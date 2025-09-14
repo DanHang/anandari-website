@@ -5,32 +5,32 @@ function Features() {
   const expertises = [
     {
       icon: Brain,
-      title: "Audit IA Stratégique",
+      title: "Audit IA stratégique",
       description: "Diagnostic ultra-précis de votre potentiel IA. Identification des leviers de croissance cachés pour multiplier votre CA par 3-5x en 12 mois."
     },
     {
       icon: TrendingUp,
-      title: "Automatisation Rentable",
+      title: "Automatisation rentable",
       description: "Réduction de 60-80% des coûts opérationnels via l'IA. Génération de revenus passifs et libération de votre temps de direction."
     },
     {
       icon: Target,
-      title: "ROI Garanti",
-      description: "Engagement de performance : +380% de ROI moyen ou remboursé. KPIs business mesurés chaque semaine avec reporting exec."
+      title: "ROI mesurable",
+      description: "Suivi précis de l'impact business avec KPIs adaptés à vos objectifs. Reporting transparent et régulier pour piloter votre transformation IA."
     },
     {
       icon: Zap,
-      title: "Domination Concurrentielle",
-      description: "Positionnement de leader grâce aux IA de nouvelle génération. Vos concurrents mettront 2-3 ans à vous rattraper."
+      title: "Avantage concurrentiel",
+      description: "Positionnement de leader grâce aux IA de nouvelle génération. Créez un écart stratégique durable avec vos concurrents."
     },
     {
       icon: Shield,
-      title: "Excellence Opérationnelle",
+      title: "Excellence opérationnelle",
       description: "Frameworks de gouvernance enterprise-grade. Conformité RGPD/IA Act et processus certifiés pour scale international."
     },
     {
       icon: Lightbulb,
-      title: "Transformation Leadership",
+      title: "Transformation leadership",
       description: "Formation de vos équipes dirigeantes à l'IA stratégique. Coaching exec pour devenir un CEO IA-native reconnu."
     }
   ];
@@ -49,8 +49,8 @@ function Features() {
             EXPERTISE
           </h3>
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
-            <span className="font-extralight">6 Leviers pour</span>
-            <span className="bg-gradient-to-r from-blue-900 to-amber-600 bg-clip-text text-transparent font-medium">Dominer votre Marché</span>
+            <span className="font-extralight">6 leviers pour </span>
+            <span className="bg-gradient-to-r from-blue-900 to-amber-600 bg-clip-text text-transparent font-medium">accélérer votre croissance</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
             La méthode prouvée pour transformer votre business en machine de croissance IA à haute rentabilité

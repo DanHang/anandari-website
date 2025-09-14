@@ -5,15 +5,15 @@ function HowItWorks() {
   const steps = [
     {
       stepNumber: "PHASE 1",
-      title: "Diagnostic IA Stratégique",
+      title: "Diagnostic IA stratégique",
       description: "Audit ultra-précis de votre potentiel IA. Identification des gisements de croissance cachés et des quick wins à 6 chiffres.",
       icon: Search,
       color: "from-blue-900 to-blue-700"
     },
     {
       stepNumber: "PHASE 2", 
-      title: "Architecture de Domination",
-      description: "Roadmap IA exclusive pour écraser la concurrence. Sélection des technologies d'avant-garde et KPIs garantissant le ROI.",
+      title: "Architecture de croissance",
+      description: "Roadmap IA exclusive pour surpasser la concurrence. Sélection des technologies d'avant-garde et KPIs garantissant le ROI.",
       icon: Lightbulb,
       color: "from-gray-800 to-gray-600"
     },
@@ -40,9 +40,9 @@ function HowItWorks() {
             MÉTHODOLOGIE
           </h3>
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
-            <span className="font-extralight">La Méthode</span>
+            <span className="font-extralight">La méthode</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-900 to-amber-600 bg-clip-text text-transparent font-medium">DOMINATION IA</span>
+            <span className="bg-gradient-to-r from-blue-900 to-amber-600 bg-clip-text text-transparent font-medium">CROISSANCE IA</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
             3 phases prouvées pour transformer votre business en empire IA rentable et inattaquable
@@ -51,7 +51,7 @@ function HowItWorks() {
         
         <div className="max-w-6xl mx-auto">
           {/* Desktop Layout */}
-          <div className="hidden lg:flex lg:justify-between lg:items-start gap-8">
+          <div className="hidden lg:flex lg:justify-between lg:items-stretch gap-8">
             {steps.map((step, index) => {
               const IconComponent = step.icon;
               return (
@@ -69,7 +69,7 @@ function HowItWorks() {
                     <div className="absolute top-16 left-full w-8 h-0.5 bg-gradient-to-r from-gray-300 to-gray-200 z-0 hidden lg:block"></div>
                   )}
                   
-                  <div className="relative bg-white border border-gray-200 rounded-2xl p-8 hover:border-gray-300 hover:shadow-xl transition-all duration-300 group">
+                  <div className="relative bg-white border border-gray-200 rounded-2xl p-8 hover:border-gray-300 hover:shadow-xl transition-all duration-300 group h-full flex flex-col">
                     <div className="mb-6">
                       <div className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-xl flex items-center justify-center mb-4`}>
                         <IconComponent className="w-8 h-8 text-white" />
@@ -81,7 +81,7 @@ function HowItWorks() {
                         {step.title}
                       </h3>
                     </div>
-                    <p className="text-gray-600 leading-relaxed font-light">
+                    <p className="text-gray-600 leading-relaxed font-light flex-grow">
                       {step.description}
                     </p>
                   </div>
